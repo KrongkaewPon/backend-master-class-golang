@@ -31,7 +31,6 @@ func (server *Server) createAccount(ctx *gin.Context) {
 	account, err := server.store.CreateAccount(ctx, arg)
 	if err != nil {
 		if pqErr, ok := err.(*pq.Error); ok {
-			log.Println("========ddddd")
 			log.Println(pqErr.Code.Name())
 			switch pqErr.Code.Name() {
 			case "unique_violation":
