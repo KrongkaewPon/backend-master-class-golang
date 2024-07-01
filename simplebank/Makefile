@@ -1,7 +1,7 @@
 DB_URL=postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable
 
 startdb:
-	docker compose up -d
+	docker compose up postgres redis -d
 
 stopdb:
 	docker compose down
