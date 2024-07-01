@@ -38,7 +38,7 @@ func GrpcLogger(
 		Int("status_code", int(statusCode)).
 		Str("status_text", statusCode.String()).
 		Dur("duration", duration).
-		Msg("received a gRPC request")
+		Msg("received a gRPC request!!")
 
 	return result, err
 }
