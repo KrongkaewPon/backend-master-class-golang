@@ -34,7 +34,8 @@ server:
 	go run main.go
 
 mock:
-	mockgen --build_flags=--mod=mod -destination db/mock/store.go simplebank/db/sqlc Store  
+	mockgen --build_flags=--mod=mod -destination db/mock/store.go simplebank/db/sqlc Store 
+	mockgen -package mockwk -destination worker/mock/distributor.go simplebank/worker TaskDistributor 
 
 proto:
 	rm -f pb/*.go
