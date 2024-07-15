@@ -22,6 +22,7 @@ func NewServer(config util.Config, store db.Store, taskDistributor worker.TaskDi
 	if err != nil {
 		return nil, fmt.Errorf("cannot create token maker: %w", err)
 	}
+
 	server := &Server{
 		config:          config,
 		store:           store,
